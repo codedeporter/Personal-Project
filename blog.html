@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Project</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/8ec63f7015.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+             <div class="navbar__logo-container">
+                <img src="./my lil buddy-logos/my lil buddy-logos_black.png" alt="logo">
+            </div>
+            <div class="navbar__list">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="guide.html">Guide</a></li>
+                </ul>
+            </div>
+            <div class="navbar__icons">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-bars menu"></i>
+            </div>
+        </nav>
+        <div class="diary-login-form">
+            <form action="" class="form">
+                <h2>My Diary</h2>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-user"></i>
+                        <label for="username">Username</label>
+                    </div>
+                    
+                    <input type="text" placeholder="username">
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-lock"></i>
+                        <label for="password">Password</label> 
+                    </div>
+                    
+                    <input type="text" placeholder="password">
+                </div>
+                <div>
+                    <button class="btn">Sign in</button>
+                    <p><a href="#">Forgot Password</a></p>
+                    <p><a href="#">New User</a></p>
+                    <button class="btn">Signup</button>
+                </div>
+                
+            </form>
+            <div>
+            <textarea cols="100" rows="5" class="notes" placeholder="Enter your notes here"></textarea>
+            <button class="btn" onclick="newNotes()">Create Note</button>
+            
+            
+            </div>
+            <div class="note"></div>
+        </div>
+        
+        
+    
+    
+    
+    <footer class="footer">
+        <div class="footer__logo-container">
+            <img class="logo" src="./my lil buddy-logos/my lil buddy-logos_black.png" alt="logo">
+        </div>
+        <div class="footer__social-media">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="footer__emergency-contacts">
+            <ul>
+                <li>988</li>
+                <li>The Trevor Project</li>
+                <li>Good Samaritans</li>
+            </ul>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
