@@ -16,7 +16,7 @@ function newNotes(){
     let newNote = notes.value
     let date = new Date
     note.innerHTML = `<div>
-    <h1>${newNote}</h1>
+    <h3>${newNote}</h3>
     <p>${date.toDateString()}, ${date.
         toLocaleTimeString()}</p>
     <div>`

@@ -15,13 +15,6 @@ font-family: 'Raleway', sans-serif; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-.container {
-  max-width: 1300px;
-  margin: 0 auto;
-  font-family: "Poppins", sans-serif;
 }
 
 /*navbar starts*/
@@ -30,13 +23,15 @@ font-family: 'Raleway', sans-serif; */
   display: flex;
   height: 100px;
   margin: 0 auto;
+  width: 1300px;
   justify-content: space-between;
   align-items: center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #609EA2;
 }
-.navbar__logo-container img {
-  width: 300px;
-  object-fit: contain;
+.navbar__logo-container{
+    width: 300px;
+    object-fit: contain;
 }
 .navbar__list {
   width: 50%;
@@ -53,6 +48,7 @@ font-family: 'Raleway', sans-serif; */
   text-decoration: none;
   font-size: 1.4em;
   color: var(--black);
+  font-weight: bold;
 }
 .navbar__list a::after {
   content: "";
@@ -66,6 +62,7 @@ font-family: 'Raleway', sans-serif; */
 }
 .navbar__icons {
   display: flex;
+  color: var(--black);
 }
 .navbar__icons .fa-solid {
   margin-left: 10px;
@@ -77,13 +74,7 @@ font-family: 'Raleway', sans-serif; */
     display: none;
 }
 /*media queries for navbar start*/
-@media screen and (max-width:990px){
-    html{
-        font-size: 15px;
-    }
-    .navbar{
-        max-width: 900px;
-    }
+/* @media screen and (max-width:990px){
     nav a{
         margin-left: 10px;
         font-size: 1.2em;
@@ -92,13 +83,16 @@ font-family: 'Raleway', sans-serif; */
         margin-left: 20px;
     }
 }
+@media screen and (max-width:850px){
+    nav a{
+        margin-left: 10px;
+        font-size: 1em;
+    }
+}
 
 @media screen and (max-width:768px){
     html{
-        font-size: 14px;
-    }
-    .navbar{
-        max-width: 670px;
+        font-size: 13px;
     }
     .navbar__list ul{
         position: absolute;
@@ -138,6 +132,12 @@ font-family: 'Raleway', sans-serif; */
         max-width: 530px;
     }
 }
+@media screen and (max-width:360px){
+    html{
+        font-size: 10px;
+    }
+    
+} */
 
 /*media queries for navbar ends*/
 
@@ -148,9 +148,11 @@ font-family: 'Raleway', sans-serif; */
   justify-content: space-between;
   align-items: center;
   height: 90vh;
-  margin: 20px;
+  /* margin: 20px; */
   font-size: 1.6em;
   padding: 20px;
+  margin: 0 auto;
+  background-color: #F0EEED;
 
 }
 .main__left-side {
@@ -165,12 +167,24 @@ font-family: 'Raleway', sans-serif; */
   text-align: right;
   width: 100%;
   font-size: 3rem;
-  color: var(--red);
+  color: #C92C6D;
+  font-family: 'Kaushan Script', cursive;
 }
 blockquote {
   font-size: 1.8rem;
   margin-top: 20px;
+  line-height: 70px;
   
+}
+blockquote::before{
+    content: open-quote;
+    font-size: 2em;
+    color: var(--red);
+}
+blockquote::after{
+    content: close-quote;
+    font-size: 2em;
+    color: var(--red);
 }
 .author {
   text-align: right;
@@ -178,7 +192,7 @@ blockquote {
   margin-top: 20px;
 }
 .main__left-side .btn {
-  background-color: var(--red);
+  background-color: #C92C6D;
   color: white;
   padding: 1rem 3rem;
   border-radius: 5px;
@@ -196,15 +210,24 @@ blockquote {
 }
 
 /*media queries for index start*/
-@media screen and (max-width:990px){
+@media screen and (max-width:1024px){
     .main{
-        padding: 20px;
+        height: 90vh;
+    }
+    html{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:990px){
+    html{
+        font-size: 14px;
     }
     .main__left-side{
-        width: 100%;
+        width: 60%;
     }
     .main__left-side h1{
-        margin-top: 20px;
+        /* margin-top: 20px; */
         font-size: 2rem;
     }
     .main__left-side span{
@@ -212,14 +235,15 @@ blockquote {
     }
     .main__left-side .btn{
         width: 90%;
-    }
-    .main__right-side{
-        width: 100%;  
-    }
+     }
+    
 }
 @media screen and (max-width:768px){
-    
+    html{
+        font-size: 13px;
+    }
     .main{
+        text-align: center;
         flex-direction: column;
         width: 100%;
     }
@@ -233,29 +257,30 @@ blockquote {
     }
     blockquote{
         font-size: 1.5rem;
+        line-height: 3;
     }
     .main__left-side .author{
         text-align: left;
     }
     .main__left-side .btn{
         margin-bottom: 20px;
-        width: 50%;
+        width: 100%;
     }
     .main__right-side img{
         margin-top: 20px;
         display: block;
         margin: 0 auto;
         object-fit: contain;
-        height: 400px;
+        height: 350px;
     }
     
 }
 @media screen and (max-width:575px){
-    .navbar{
-        max-width: 850px;
+    .main{
+        text-align: center;
     }
-    .container{
-        margin: 20px;
+    .main__left-side{
+        width: 100%;
     }
     .main__left-side h1{
         font-size: 1.5rem;
@@ -265,46 +290,169 @@ blockquote {
     }
     blockquote{
         font-size: 1.4rem;
+        line-height: 2.5;
     }
     .main__left-side .btn{
-        width:60%;
+        width:100%;
+    }
+    .main__right-side img{
+        height: 250px;
+        position: absolute;
+        bottom: -90px;
+        left: 80px;
     }
     
 }
 @media screen and (max-width:495px){
-    .navbar{
-        max-width: 460px;
+    .main{
+        text-align: center;
     }
-    .container{
-        margin: 20px;
+    .main__left-side{
+        width: 100%;
     }
     .main__left-side h1{
         font-size: 1.5rem;
     }
     blockquote{
         font-size: 1.3rem;
+        line-height: 2.5;
     }
-    .main__left-side .btn{
-        width: 70%;
-    }
-
-}
-@media screen and (max-width:350px){
-    .main{
+    .main__left-side{
         text-align: center;
-    }
-    .main__left-side h1{
-        font-size: 1.5rem;
-    }
-    blockquote{
-        font-size: 1.2rem;
     }
     .main__left-side .btn{
         width: 100%;
     }
+    .main__right-side img{
+        height: 300px;
+        position: absolute;
+        bottom: -60px;
+        left: 20px;
+    }
+    
+
+}
+@media screen and (max-width:380px){
+    .main{
+        text-align: center;
+    }
+    .main__left-side{
+        width: 100%;
+    }
+    .main__left-side h1{
+        font-size: 1.5rem;
+        
+    }
+    blockquote{
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+    .main__left-side .btn{
+        width: 100%;
+    }
+    .main__right-side img{
+        height: 200px;
+        position: absolute;
+        bottom: -70px;
+        left: 20px;
+    }
+}
+@media screen and (max-width:360px){
+    .main{
+        text-align: center;
+    }
+    .main__left-side{
+        width: 100%;
+    }
+    .main__left-side h1{
+        font-size: 1.5rem;
+        
+    }
+    blockquote{
+        font-size: 1.2rem;
+        line-height: 2.5;
+    }
+    .main__left-side .btn{
+        width: 100%;
+    }
+    .main__right-side img{
+        width: 200px;
+        position: absolute;
+        bottom: -70px;
+        left: 120px;
+    }
+}
+@media screen and (max-width:280px){
+    .main{
+        height: 100vh;
+        text-align: center;
+    }
+    .main__right-side img{
+        width: 150px;
+        position: absolute;
+        bottom: -70px;
+        left: 130px;
+    }
+    
+}
+@media screen and (max-width:249px){
+    blockquote{
+        line-height: 3;
+    }
+    main{
+        height: 100vh;
+        text-align: center;
+    }
+    .main__right-side img{
+        width: 150px;
+        position: absolute;
+        bottom: -5px;
+        left: 140px;
+    }
 }
 /*media queries for index ends*/
 /*index ends*/
+
+/*footer starts*/
+.footer{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #332C39;
+}
+.footer img{
+    width: 300px;
+    height: 200px;
+    object-fit: contain;
+}
+.footer__logo-container p{
+    color: white;
+    font-size: 2rem;
+}
+.footer__social-media a{
+    margin-left: 20px;
+    font-size: 1.2rem;
+    color: white;
+}
+.footer__social-media a:hover i{
+    color: var(--red);
+}
+.footer__emergency-contacts ul{
+    list-style: none;
+    font-size: 1.4rem;
+}
+.footer__emergency-contacts a{
+    text-decoration: none;
+    color: white;
+}
+.footer__emergency-contacts a:hover{
+    color: var(--red);
+}
+/*footer ends*/
 
 /*diary starts*/
 .diary-login-form{
@@ -312,7 +460,8 @@ blockquote {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    /* margin: 20px; */
+    background-color: #F0EEED;
 }
 .form{
     width: 500px;
@@ -330,7 +479,7 @@ blockquote {
 .form h2::after{
     content: url(//unsplash.it/100/100);
     display: block;
-    margin-top: 20px;
+    margin: 20px;
 }
 .form label{
     font-size: 1.2rem;
@@ -340,6 +489,7 @@ blockquote {
     width: 300px;
     border-radius: 5px;
     outline: none;
+    margin-bottom: 20px;
 }
 .form .btn{
     background-color: var(--red);
@@ -360,22 +510,40 @@ blockquote {
 }
 
 .note{
+    border: 3px solid var(--red);
+}
+.notes-btn{
+    display: block;
+    background-color: var(--red);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 20px;
+    font-weight: bold;
+    width: 50%;
+    cursor: pointer;
+    margin: 0 auto;
 
 }
-.diary-login-form .btn{
-    display: block;
-    text-align: center;
-}
+
 /*diary ends*/
 
 /* guide begins */
 
 .help-someone{
     /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-    margin: 20px auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
+    background-color: #F0EEED;
+}
+
+.help-someone h1{
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5rem;
 }
 
 .help-someone h2{
@@ -436,3 +604,28 @@ blockquote {
 }
 
 /*guide ends */
+
+/*about begin*/
+.about-mlb{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2em;
+    font-size: 1.6em;
+    border-bottom-left-radius: 50px 500px;
+    border-bottom-right-radius: 25px 700px;
+    border-top-right-radius: 75px 300px;
+    padding: 80px;
+    background-image: repeating-linear-gradient(180deg, var(--red), var(--red) 1px, #fff 1px, #fff 40px );
+    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.2);
+    line-height: 40px;
+}
+.mlb-btn{
+    background-color: var(--red);
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    margin-top: 58px;
+    font-weight: bold;
+    width: 80%;
+}
+/*about ends*/
